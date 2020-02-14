@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from 'react-dom';
 import TodoApp from "./components/TodoApp";
 import Header from "./components/Header";
 import Counter from "./components/Counter";
@@ -39,4 +38,3 @@ function App() {
 }
 
 export default App;
-ReactDOM.render(<App />, document.getElementById("root"))
