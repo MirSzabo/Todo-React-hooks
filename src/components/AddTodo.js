@@ -1,7 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { TodosContext } from "../context/todos.context";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -10,7 +9,6 @@ function AddTodo({ addTodo }) {
   const [value, setValue] = useState("");
   const [deadline, setDeadline] = useState("");
   const [date, setDate] = useState("");
-  //const {addTodo} = useContext(TodosContext);
   return (
     <div>
       <Paper style={{ margin: "1rem 0", padding: "0 1rem" }}>
