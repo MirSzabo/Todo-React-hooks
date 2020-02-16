@@ -25,7 +25,7 @@ function TodoApp() {
       ...todos,
       {
         id: uuid(),
-        description: newTodoText || "missing description",
+        description: newTodoText || "",
         deadline: newDeadline || "no deadline",
         completed: false
       }
@@ -34,7 +34,6 @@ function TodoApp() {
   };
 
   const removeTodo = todoId => {
-    console.log(todoId)
     const updatedTodos = todos.filter(todo => todo.id !== todoId);
     setTodos(updatedTodos);
   };
@@ -61,9 +60,11 @@ function TodoApp() {
         onSortStart={(_, event) => event.preventDefault()}
       >
         {todos.map((todo, i) => (
+
               <TodoItemSortable
                 index={i}
                 key={todo.id}
+                id={todo.id}
                 description={todo.description}
                 deadline={todo.deadline}
                 editTodo={editTodo}

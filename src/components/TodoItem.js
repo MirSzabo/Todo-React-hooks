@@ -11,7 +11,6 @@ import { sortableElement } from "react-sortable-hoc";
 
 const TodoItemSortable = sortableElement(
   ({ id,
-    i,
     description,
     deadline,
     completed,
@@ -19,7 +18,7 @@ const TodoItemSortable = sortableElement(
     editTodo,
     toggleTodo
   }) => (
-    <Todo index={i} id={id} description={description} deadline={deadline} completed={completed} removeTodo={removeTodo} editTodo={editTodo} toggleTodo={toggleTodo}/>
+    <Todo id={id} description={description} deadline={deadline} completed={completed} removeTodo={removeTodo} editTodo={editTodo} toggleTodo={toggleTodo}/>
   )
 );
 

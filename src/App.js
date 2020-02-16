@@ -7,7 +7,7 @@ import Paper from "@material-ui/core/Paper";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
-import "./index.css";
+import './index.css';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
     >
       <AppBar color="primary" position="static" style={{ height: "94px" }}>
         <Toolbar>
-          <Typography component={"div"} color="inherit">
+          <Typography  component={'div'} color="inherit">
             <Header />
             <Counter />
           </Typography>

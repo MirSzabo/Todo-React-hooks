@@ -2,14 +2,16 @@
   "name": "week2",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.9.0",
+    "node": "10.16.3"
+  },
   "dependencies": {
     "@material-ui/core": "^4.9.2",
     "@material-ui/icons": "^4.9.1",
     "array-move": "^2.2.1",
     "express": "^4.17.1",
-    "express-favicon": "^2.0.1",
     "moment": "^2.24.0",
-    "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-datepicker": "^2.12.1",
