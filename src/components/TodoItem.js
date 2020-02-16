@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EditTodoForm from "./EditTodoForm";
 import ListItemText from "@material-ui/core/ListItemText";
-import CheckBox from "@material-ui/core/CheckBox";
+import Checkbox from '@material-ui/core/Checkbox'
 import ListItem from "@material-ui/core/ListItem";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import IconButton from "@material-ui/core/IconButton";
@@ -51,7 +51,7 @@ function Todo({
     return (
         <ListItem style={{ margin: "0.5rem" }}>
           <ListItemText>
-            <CheckBox
+            <Checkbox
               type="checkbox"
               name="completed"
               value={completed}
