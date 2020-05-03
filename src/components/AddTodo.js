@@ -4,6 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import CalendarIcon from "@material-ui/icons/Today";
 
 function AddTodo({ addTodo }) {
   const [value, setValue] = useState("");
@@ -13,7 +14,7 @@ function AddTodo({ addTodo }) {
     <div>
       <Paper style={{ margin: "1rem 0", padding: "0 1rem" }}>
         <form
-          onSubmit={event => {
+          onSubmit={(event) => {
             event.preventDefault();
             addTodo(value, deadline);
             setValue("");
@@ -22,7 +23,7 @@ function AddTodo({ addTodo }) {
           <div>
             <TextField
               value={value}
-              onChange={event => setValue(event.target.value)}
+              onChange={(event) => setValue(event.target.value)}
               type="text"
               margin="normal"
               label="What I need to do"
@@ -31,24 +32,31 @@ function AddTodo({ addTodo }) {
           </div>
         </form>
       </Paper>
-      <div style={{ display: 'flex', justifyContent: "space-around", alignItems: 'center' }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <CalendarIcon  />
         <DatePicker
           selected={date}
           minDate={new Date()}
-          onChange={event => {
+          onChange={(event) => {
             setDate(event);
             setDeadline(event.toLocaleDateString());
           }}
         />
 
-      <Button
-        style={{ margin: "2rem" }}
-        onClick={() => addTodo(value, deadline)}
-        variant="contained"
-        color="primary"
-      >
-        Add todo
-      </Button>
+        <Button
+          style={{ margin: "2rem" }}
+          onClick={() => addTodo(value, deadline)}
+          variant="contained"
+          color="primary"
+        >
+          Add todo
+        </Button>
       </div>
     </div>
   );
